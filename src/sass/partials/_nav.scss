@@ -1,0 +1,28 @@
+.nav {
+  background-color: black;
+
+  &__logo {
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
+  }
+
+  &__icon {
+    color: white !important;
+  }
+
+  &__logo:hover {
+    text-decoration: none;
+    color: white;
+  }
+  &__link {
+    margin-left: 20px;
+    color: white;
+    font-weight: 600 !important;
+  }
+
+  &__link:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
