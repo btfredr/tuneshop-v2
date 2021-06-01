@@ -35,7 +35,7 @@ const Navigation = () => {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar__logo">
-          Tuneshop <i class="fas fa-record-vinyl"></i>
+          Tuneshop <i className="fas fa-record-vinyl"></i>
         </Link>
         <div className="navbar__icon" onClick={handleToggle}>
           <i className={toggle ? "fas fa-times" : "fas fa-bars"} />
