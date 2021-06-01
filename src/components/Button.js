@@ -1,5 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Button = () => {
-  return <div>Button lol</div>;
+  return (
+    <Link to="/login">
+      <button className="btn">Login</button>
+    </Link>
+  );
 };
 
 export default Button;

@@ -1,0 +1,22 @@
+.btn {
+  padding: 8px 20px;
+  outline: none;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+
+.btn:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  color: var(--primary);
+}
+
+@media (max-width: 990px) {
+  button {
+    display: none;
+  }
+}
