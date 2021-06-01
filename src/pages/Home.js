@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { ContentGrid } from "../components/content/ContentGrid";
+import { FeaturedGrid } from "../components/content/FeaturedGrid";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -18,8 +18,9 @@ const Home = () => {
   }, []);
   return (
     <>
-      <div>
-        <h2>Home</h2>
+      <div className="imageContainer"></div>
+      <div className="container">
+        <FeaturedGrid isLoading={isLoading} products={products} />
       </div>
     </>
   );
