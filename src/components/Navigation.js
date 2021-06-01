@@ -1,44 +1,26 @@
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import Button from "./Button";
+import Dropdown from "./Dropdown";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  return (
-    <Navbar className="nav" bg="dark" expand="lg">
-      <NavLink to="/" className="nav__logo">
-        Tuneshop
-      </NavLink>
+  const [toggle, setToggle] = useState(false);
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse className="nav__icon" id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <NavLink
-            exact
-            to="/"
-            className="nav__link"
-            activeClassName="nav__active"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            exact
-            to="/products"
-            className="nav__link"
-            activeClassName="nav__active"
-          >
-            Products
-          </NavLink>
-          <NavLink
-            exact
-            to="/cart"
-            className="nav__link"
-            activeClassName="nav__active"
-          >
-            Cart
-          </NavLink>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
+  return (
+    <>
+      <nav className="navbar">
+        <Link to="/" className="navbar__logo">
+          Tuneshop
+        </Link>
+        <div className="nav__icon" onClick={handleToggle}>
+          <i className={toggle ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+      </nav>
+    </>
   );
 };
 
