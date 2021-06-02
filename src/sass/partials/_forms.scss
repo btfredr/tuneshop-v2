@@ -1,0 +1,62 @@
+.form {
+  display: block;
+  background-color: #fffffc;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin-top: 2em;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+  }
+
+  &__btn {
+    background-color: #1888ff;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    width: 15%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__btn:hover {
+    text-decoration: none;
+    background-color: #1888ff;
+    color: white;
+  }
+
+  @media (max-width: 990px) {
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  &__error {
+    background-color: #ffc4c4;
+    padding: 0.5em;
+    margin-top: 10px;
+    border: 1px solid black;
+    display: block;
+  }
+
+  &__success {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    margin-top: 1em;
+    padding: 0.7em;
+  }
+}
+
+.loginError {
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-weight: bold;
+}

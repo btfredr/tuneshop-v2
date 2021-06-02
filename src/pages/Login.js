@@ -46,8 +46,8 @@ const Login = () => {
       <div className="container">
         <h2>Login</h2>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          <fieldset>
-            <div>
+          <fieldset disabled={submitting}>
+            <div className="form__item">
               <label>Username</label>
               <input
                 name="identifier"
@@ -59,7 +59,7 @@ const Login = () => {
                 <p className="form__error">{errors.identifier.message}</p>
               )}
             </div>
-            <div>
+            <div className="form__item">
               <label>Password</label>
               <input
                 name="password"
