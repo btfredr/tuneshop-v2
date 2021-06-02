@@ -8,10 +8,11 @@ import Cart from "./pages/Cart";
 import Products from "./pages/Products";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Router>
         <Navigation />
         <Switch>
@@ -24,7 +25,7 @@ function App() {
           <Route path="/products" exact component={Products}></Route>
         </Switch>
       </Router>
-    </>
+    </AuthProvider>
   );
 }
 

@@ -37,6 +37,20 @@
     text-decoration: none;
     padding: 0.5rem 1rem;
   }
+  &__login {
+    background-color: #1888ff;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  &__login:hover {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    color: #1888ff;
+    transition: 250ms;
+  }
 
   &__link:hover {
     background-color: #1888ff;
@@ -44,7 +58,6 @@
     transition: all 0.2s ease-out;
   }
 
-  &__link--mobile,
   &__icon {
     display: none;
   }
@@ -108,7 +121,7 @@
       font-size: 2rem;
     }
 
-    &__link--mobile {
+    &__login {
       display: block;
       text-align: center;
       padding: 1.5rem;
@@ -121,7 +134,7 @@
       font-size: 1.5rem;
     }
 
-    &__link--mobile:hover {
+    &__login:hover {
       background: #fff;
       color: #1888ff;
       transition: 250ms;
