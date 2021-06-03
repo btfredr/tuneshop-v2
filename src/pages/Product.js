@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { BASE_URL } from "../utils/constants";
+import { PRODUCT_PATH } from "../utils/constants";
 import { useParams } from "react-router-dom";
+import AddProductToCart from "../components/AddProductToCart";
 
-const product = () => {
-  const [product, setproduct] = useState(null);
+const Product = () => {
+  const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const { id } = useParams();
 
-  const url = BASE_URL + "/products/" + id;
+  const url = PRODUCT_PATH + id;
 
   useEffect(
     function () {
@@ -19,7 +20,7 @@ const product = () => {
 
           if (response.ok) {
             const json = await response.json();
-            setproduct(json);
+            setProduct(json);
           } else {
             setError("An error occurred");
           }
@@ -45,18 +46,17 @@ const product = () => {
   return (
     <>
       <div className="container">
-        <h2>{product.title}</h2>
-        <div className="imageContainer">
-          <div className="productImage">
+        <div className="detail">
+          <div className="detail__image">
             <img src={product.imageURL} alt={product.title} />
           </div>
-        </div>
-        <div className="product">
+          <h2 className="detail__title">{product.title}</h2>
           <p>{product.description}</p>
+          <AddProductToCart product={product} />
         </div>
       </div>
     </>
   );
 };
 
-export default product;
+export default Product;

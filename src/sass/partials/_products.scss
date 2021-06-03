@@ -46,6 +46,18 @@
 
   &__btnContainer {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 990px) {
+    &__btnContainer {
+      flex-direction: row;
+    }
+
+    &__viewMore {
+      margin: 0px;
+    }
   }
 
   &__btn {
@@ -63,6 +75,20 @@
     text-decoration: none;
     background-color: var(--accent);
     color: white;
+  }
+
+  &__viewMore {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.8em;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
   }
 }
 
