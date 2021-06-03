@@ -1,15 +1,25 @@
-import { useState } from "react";
+import useLocalStorage from "../utils/useLocalStorage";
 import { CartGrid } from "../components/content/CartGrid";
 
 const Cart = () => {
-  const getItemsFromCart = JSON.parse(localStorage.getItem("cart" || "[]"));
-  const [cartItems] = useState(getItemsFromCart);
+  const [cartItems] = useLocalStorage("cartItems", []);
+
+  const itemManagement = () => {
+    if (!cartItems) {
+      return [];
+    } else {
+      const getItemsFromCart = JSON.parse(localStorage.getItem("cartItems"));
+    }
+  };
 
   return (
-    <>
+    <div className="container">
       <h2>Cart</h2>
-      <CartGrid products={cartItems} />
-    </>
+      <button onClick={() => window.localStorage.removeItem("cartItems")}>
+        Clear cart
+      </button>
+      <CartGrid products={cartItems} cartItems={cartItems} />
+    </div>
   );
 };
 

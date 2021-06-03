@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
+import useLocalStorage from "../utils/useLocalStorage";
 
 const AddProductToCart = ({ product }) => {
-  const [cart, setCart] = useState([]);
+  const [items, setItems] = useLocalStorage("cartItems", []);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    setItems([...items, product]);
   };
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+    window.localStorage.setItem("cartItems", JSON.stringify(items));
+  }, [items]);
+
   return (
     <button className="product__btn" onClick={() => addToCart(product)}>
       Add To Cart

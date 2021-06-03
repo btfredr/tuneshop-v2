@@ -1,10 +1,10 @@
 const CartItem = ({ product }) => {
   return (
     <>
-      <div className="product">
+      <div className="cart__item">
         <img src={product.imageURL} alt={product.title} />
-        <div className="product__content">
-          <h4>{product.title}</h4>
+        <h4>{product.title}</h4>
+        <div className="cart__content">
           <p>
             <strong>$ {product.price}</strong>
           </p>

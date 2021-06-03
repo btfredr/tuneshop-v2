@@ -1,0 +1,13 @@
+.cart {
+  display: table;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  &__content {
+    display: block;
+  }
+}
