@@ -1,8 +1,8 @@
 import CartItem from "./CartItem";
 
 export const CartGrid = ({ products, cartItems }) => {
-  if (!cartItems) {
-    return <h1>Cart is currently empty.</h1>;
+  if (cartItems.length === 0) {
+    return <h1>Cart is empty.</h1>;
   } else {
     return (
       <section className="cart">

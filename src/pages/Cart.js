@@ -4,13 +4,11 @@ import { CartGrid } from "../components/content/CartGrid";
 const Cart = () => {
   const [cartItems] = useLocalStorage("cartItems", []);
 
-  const itemManagement = () => {
-    if (!cartItems) {
-      return [];
-    } else {
-      const getItemsFromCart = JSON.parse(localStorage.getItem("cartItems"));
-    }
-  };
+  if (!cartItems) {
+    return [];
+  } else {
+    const getItemsFromCart = JSON.parse(localStorage.getItem("cartItems"));
+  }
 
   return (
     <div className="container">
