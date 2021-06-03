@@ -1,4 +1,4 @@
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useAxios from "../utils/useAxios";
 import { useState, useEffect } from "react";
 import { PRODUCT_PATH } from "../utils/constants";
@@ -10,7 +10,6 @@ const Add = () => {
   const [product, setProduct] = useState(null);
   const { id } = useParams();
   const http = useAxios();
-  const history = useHistory();
 
   const [submitting, setSubmitting] = useState(false);
   const [postError, setPostError] = useState(null);
@@ -41,7 +40,6 @@ const Add = () => {
       setPostError(error.toString());
     } finally {
       setSubmitting(false);
-      history.push("/products");
     }
   };
 

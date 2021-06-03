@@ -1,3 +1,5 @@
+import AddProductToCart from "../AddProductToCart";
+
 const FeaturedItem = ({ product }) => {
   return (
     <>
@@ -8,6 +10,9 @@ const FeaturedItem = ({ product }) => {
           <p>
             <strong>$ {product.price}</strong>
           </p>
+          <div className="product__btnContainer">
+            <AddProductToCart product={product} />
+          </div>
         </div>
       </div>
     </>

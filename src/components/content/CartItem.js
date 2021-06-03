@@ -1,6 +1,4 @@
-import AddProductToCart from "../AddProductToCart";
-
-const ContentItem = ({ product }) => {
+const CartItem = ({ product }) => {
   return (
     <>
       <div className="product">
@@ -10,13 +8,10 @@ const ContentItem = ({ product }) => {
           <p>
             <strong>$ {product.price}</strong>
           </p>
-          <div className="product__btnContainer">
-            <AddProductToCart product={product} />
-          </div>
         </div>
       </div>
     </>
   );
 };
 
-export default ContentItem;
+export default CartItem;

@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background: var(--primary);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
   font-size: 1.2rem;
 
   &__logo {
-    color: #fff;
+    color: var(--secondary);
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -33,7 +33,7 @@
   }
 
   &__link {
-    color: white;
+    color: var(--secondary);
     text-decoration: none;
     padding: 0.5rem 1rem;
   }
