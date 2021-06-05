@@ -7,7 +7,7 @@ const ContentItem = ({ product }) => {
       <div className="product">
         <img src={product.imageURL} alt={product.title} />
         <div className="product__content">
-          <h4>{product.title}</h4>
+          <h4 className="product__title">{product.title}</h4>
           <p>
             <strong>$ {product.price}</strong>
           </p>

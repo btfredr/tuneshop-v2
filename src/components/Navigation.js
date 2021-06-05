@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Dropdown from "./Dropdown";
-import { Link, useHistory } from "react-router-dom";
+import { NavLink, Link, useHistory } from "react-router-dom";
 
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
@@ -57,27 +57,37 @@ const Navigation = () => {
         <>
           <ul className={toggle ? "navbar__menu active" : "navbar__menu"}>
             <li className="navbar__item">
-              <Link to="/" className="navbar__link" onClick={closeMobileMenu}>
+              <NavLink
+                exact
+                to="/"
+                className="navbar__link"
+                onClick={closeMobileMenu}
+                activeClassName="navbar__active"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="navbar__item">
-              <Link
+              <NavLink
+                exact
                 to="/products"
                 className="navbar__link"
                 onClick={closeMobileMenu}
+                activeClassName="navbar__active"
               >
                 Products
-              </Link>
+              </NavLink>
             </li>
             <li className="navbar__item">
-              <Link
+              <NavLink
+                exact
                 to="/cart"
                 className="navbar__link"
                 onClick={closeMobileMenu}
+                activeClassName="navbar__active"
               >
                 Cart
-              </Link>
+              </NavLink>
             </li>
             {auth ? (
               <>

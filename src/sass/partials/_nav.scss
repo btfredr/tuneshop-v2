@@ -16,6 +16,11 @@
     font-size: 2rem;
   }
 
+  &__active {
+    background-color: #1888ff;
+    border-radius: 4px;
+  }
+
   &__menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
