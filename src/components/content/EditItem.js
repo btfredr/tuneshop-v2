@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AddProductToCart from "../AddProductToCart";
 
 const EditItem = ({ product }) => {
   return (
@@ -12,10 +11,7 @@ const EditItem = ({ product }) => {
             <strong>$ {product.price}</strong>
           </p>
           <div className="product__btnContainer">
-            <Link
-              to={`/product/edit/${product.id}`}
-              className="product__viewMore"
-            >
+            <Link to={`/edit/${product.id}`} className="product__viewMore">
               Edit Product
             </Link>
           </div>

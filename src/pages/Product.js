@@ -51,7 +51,11 @@ const Product = () => {
             <img src={product.imageURL} alt={product.title} />
           </div>
           <h2 className="detail__title">{product.title}</h2>
-          <p>{product.description}</p>
+          <div className="detail__content">
+            <h5 className="detail__heading">{product.heading}</h5>
+            <p>{product.description}</p>
+            <p className="detail__price">$ {product.price}</p>
+          </div>
           <AddProductToCart product={product} />
         </div>
       </div>

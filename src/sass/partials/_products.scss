@@ -51,10 +51,6 @@
   }
 
   @media (max-width: 990px) {
-    &__btnContainer {
-      flex-direction: row;
-    }
-
     &__viewMore {
       margin: 0px;
     }
@@ -68,7 +64,7 @@
     border-radius: 3px;
     border: none;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   &__btn:hover {

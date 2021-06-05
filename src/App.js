@@ -7,6 +7,7 @@ import Admin from "./pages/Admin";
 import Cart from "./pages/Cart";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
+import EditProduct from "./pages/EditProduct";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cart" exact component={Cart}></Route>
           <Route path="/products" exact component={Products}></Route>
           <Route path="/product/:id" exact component={Product}></Route>
+          <Route path="/edit/:id" exact component={EditProduct}></Route>
         </Switch>
       </Router>
     </AuthProvider>

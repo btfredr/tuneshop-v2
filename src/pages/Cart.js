@@ -7,14 +7,20 @@ const Cart = () => {
   if (!cartItems) {
     return [];
   } else {
-    const getItemsFromCart = JSON.parse(localStorage.getItem("cartItems"));
     return (
       <div className="container">
-        <h2>Cart</h2>
-        <button onClick={() => window.localStorage.removeItem("cartItems")}>
-          Clear cart
-        </button>
-        <CartGrid products={cartItems} cartItems={cartItems} />
+        <div className="cart">
+          <div className="cart__header">
+            <h2>Cart</h2>
+            <button
+              className="cart__btn"
+              onClick={() => window.localStorage.removeItem("cartItems")}
+            >
+              Clear cart
+            </button>
+          </div>
+          <CartGrid products={cartItems} cartItems={cartItems} />
+        </div>
       </div>
     );
   }

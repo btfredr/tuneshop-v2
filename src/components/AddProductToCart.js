@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import useLocalStorage from "../utils/useLocalStorage";
 
 const AddProductToCart = ({ product }) => {
