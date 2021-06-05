@@ -1,0 +1,30 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  &__link {
+    padding: 1em;
+    background-color: var(--accent);
+    margin-bottom: 25px;
+    color: var(--secondary);
+    text-decoration: none;
+    width: 50%;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 990px) {
+    &__link {
+      width: 100%;
+    }
+  }
+}
