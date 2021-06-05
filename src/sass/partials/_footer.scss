@@ -31,4 +31,16 @@
     margin-right: auto;
     margin-top: 45px;
   }
+
+  @media (max-width: 500px) {
+    &__row {
+      flex-direction: column;
+    }
+    &__list {
+      padding: 0;
+    }
+    &__column {
+      margin: 0;
+    }
+  }
 }
