@@ -42,10 +42,10 @@ const Login = () => {
   };
   return (
     <>
-      <div className="loginError">{loginError && <p>{loginError}</p>}</div>
       <div className="container">
-        <h2>Login</h2>
+        <h2 className="pageTitle">Login</h2>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
+          <div className="loginError">{loginError && <p>{loginError}</p>}</div>
           <fieldset disabled={submitting}>
             <div className="form__item">
               <label>Username</label>

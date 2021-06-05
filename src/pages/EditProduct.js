@@ -78,6 +78,7 @@ const EditProduct = () => {
 
   return (
     <div className="container">
+      <h2 className="pageTitle">Edit {product.title}</h2>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         {updateError && <p>{updateError}</p>}
         <fieldset disabled={submitting}>

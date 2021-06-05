@@ -20,6 +20,7 @@ const Home = () => {
     <>
       <div className="imageContainer"></div>
       <div className="container">
+        <h2 className="pageTitle">Featured Products</h2>
         <FeaturedGrid isLoading={isLoading} products={products} />
       </div>
     </>

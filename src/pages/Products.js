@@ -18,6 +18,7 @@ const Products = () => {
   }, []);
   return (
     <div className="container">
+      <h2 className="pageTitle">Products</h2>
       <ContentGrid isLoading={isLoading} products={products} />
     </div>
   );

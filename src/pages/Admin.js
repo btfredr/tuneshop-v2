@@ -12,7 +12,7 @@ const Admin = () => {
   }
   return (
     <div className="container">
-      <h2>Welcome admin, what do you want to do?</h2>
+      <h2 className="pageTitle">Welcome admin, what do you want to do?</h2>
       <div className="admin">
         <div className="admin__links">
           <Link to="/add" className="admin__link">
