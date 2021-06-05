@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 
 const Admin = () => {
+  const [auth] = useContext(AuthContext);
+
+  const history = useHistory();
+
+  if (!auth) {
+    history.push("/login");
+  }
   return (
     <div className="container">
       <h2>Welcome admin, what do you want to do?</h2>

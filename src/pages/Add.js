@@ -1,15 +1,24 @@
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import useAxios from "../utils/useAxios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { PRODUCT_PATH } from "../utils/constants";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import AuthContext from "../context/AuthContext";
 
 const Add = () => {
   const [product, setProduct] = useState(null);
   const { id } = useParams();
   const http = useAxios();
+
+  const [auth] = useContext(AuthContext);
+
+  const history = useHistory();
+
+  if (!auth) {
+    history.push("/login");
+  }
 
   const [submitting, setSubmitting] = useState(false);
   const [postError, setPostError] = useState(null);
