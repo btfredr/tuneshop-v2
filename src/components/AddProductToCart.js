@@ -6,6 +6,7 @@ const AddProductToCart = ({ product }) => {
 
   const addToCart = (product) => {
     setItems([...items, product]);
+    alert("Product has been added to cart");
   };
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const AddProductToCart = ({ product }) => {
 
   return (
     <button className="product__btn" onClick={() => addToCart(product)}>
-      Add To Cart
+      <i className="fas fa-shopping-cart" />
     </button>
   );
 };

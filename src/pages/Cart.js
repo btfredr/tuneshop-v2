@@ -10,12 +10,6 @@ const Cart = () => {
     return (
       <div className="container">
         <h2 className="pageTitle">Cart</h2>
-        <button
-          className="cart__btn"
-          onClick={() => window.localStorage.removeItem("cartItems")}
-        >
-          Clear cart
-        </button>
         <CartGrid products={cartItems} cartItems={cartItems} />
       </div>
     );

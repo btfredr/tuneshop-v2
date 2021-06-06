@@ -28,7 +28,7 @@ const Edit = () => {
   }, []);
   return (
     <div className="container">
-      <h2>Edit Products</h2>
+      <h2 className="pageTitle">Edit Products</h2>
       <div className="container">
         <EditGrid isLoading={isLoading} products={products} />
       </div>

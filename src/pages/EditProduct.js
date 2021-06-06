@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import AuthContext from "../context/AuthContext";
+import DeleteButton from "../components/DeleteButton";
 
 const EditProduct = () => {
   const [product, setProduct] = useState(null);
@@ -149,6 +150,7 @@ const EditProduct = () => {
             <button type="submit" className="form__btn">
               {submitting ? "Updating ..." : "Update"}
             </button>
+            <DeleteButton id={product.id} />
           </div>
         </fieldset>
       </form>

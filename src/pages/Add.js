@@ -66,7 +66,7 @@ const Add = () => {
   }, [id, http]);
   return (
     <div className="container">
-      <h2>Add new product</h2>
+      <h2 className="pageTitle">Add new product</h2>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         {postError && <p>{postError}</p>}
         <fieldset disabled={submitting}>
