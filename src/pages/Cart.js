@@ -9,16 +9,14 @@ const Cart = () => {
   } else {
     return (
       <div className="container">
-        <div className="cart">
-          <h2 className="pageTitle">Cart</h2>
-          <button
-            className="cart__btn"
-            onClick={() => window.localStorage.removeItem("cartItems")}
-          >
-            Clear cart
-          </button>
-          <CartGrid products={cartItems} cartItems={cartItems} />
-        </div>
+        <h2 className="pageTitle">Cart</h2>
+        <button
+          className="cart__btn"
+          onClick={() => window.localStorage.removeItem("cartItems")}
+        >
+          Clear cart
+        </button>
+        <CartGrid products={cartItems} cartItems={cartItems} />
       </div>
     );
   }

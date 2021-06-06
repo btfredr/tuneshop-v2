@@ -50,6 +50,7 @@ const EditProduct = () => {
       console.log("error", error);
       setUpdateError(error.toString());
     } finally {
+      history.push(`/product/${id}`);
     }
   };
 
@@ -82,7 +83,8 @@ const EditProduct = () => {
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         {updateError && <p>{updateError}</p>}
         <fieldset disabled={submitting}>
-          <div>
+          <div className="form__item">
+            <label>Title</label>
             <input
               className="input"
               name="title"
@@ -93,7 +95,8 @@ const EditProduct = () => {
             {errors.title && <p>{errors.title.message}</p>}
           </div>
 
-          <div>
+          <div className="form__item">
+            <label>Price</label>
             <input
               className="input"
               name="price"
@@ -104,7 +107,8 @@ const EditProduct = () => {
             />
             {errors.price && <p>{errors.price.message}</p>}
           </div>
-          <div>
+          <div className="form__item">
+            <label>Description</label>
             <textarea
               className="input"
               name="description"
@@ -115,7 +119,8 @@ const EditProduct = () => {
             />
             {errors.description && <p>{errors.description.message}</p>}
           </div>
-          <div>
+          <div className="form__item">
+            <label>Image URL</label>
             <input
               className="input"
               name="imageURL"
@@ -127,7 +132,8 @@ const EditProduct = () => {
             {errors.imageURL && <p>{errors.imageURL.message}</p>}
           </div>
 
-          <div>
+          <div className="form__item">
+            <label>Heading</label>
             <input
               className="input"
               name="heading"
@@ -140,7 +146,7 @@ const EditProduct = () => {
           </div>
 
           <div className="buttons">
-            <button type="submit" className="update">
+            <button type="submit" className="form__btn">
               {submitting ? "Updating ..." : "Update"}
             </button>
           </div>

@@ -9,13 +9,14 @@ export const CartGrid = ({ products, cartItems }) => {
     return <h1>Cart is empty.</h1>;
   } else {
     return (
-      <section className="cart">
-        {products.map((product) => (
-          <CartItem key={product.id} product={product}></CartItem>
-        ))}
-
-        <div>Total Cost: ${getTotal()}</div>
-      </section>
+      <>
+        <section className="cart">
+          {products.map((product) => (
+            <CartItem key={product.id} product={product}></CartItem>
+          ))}
+        </section>
+        <div className="cart__total">Total Cost: ${getTotal()}</div>
+      </>
     );
   }
 };
